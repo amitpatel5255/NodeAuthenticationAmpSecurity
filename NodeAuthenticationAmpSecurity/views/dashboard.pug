@@ -1,0 +1,61 @@
+doctype html
+html
+  head
+    title Dashboard
+    style.
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+      }
+      p {
+        color: #666;
+      }
+      .welcome {
+        margin-bottom: 20px;
+      }
+      .logout-link {
+        display: inline-block;
+        margin-right: 10px;
+        padding: 10px 20px;
+        text-decoration: none;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .logout-link:hover {
+        background-color: #0056b3;
+      }
+      .users-link {
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+        background-color: #28a745;
+        color: #fff;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .users-link:hover {
+        background-color: #218838;
+      }
+    body
+      div(class="container")
+        h1 Dashboard
+        div(class="welcome")
+          p Welcome #{user.username}
+        a(href="/logout" class="logout-link") Logout
+        a(href="/logoutAll" class="logout-link") Logout from All Devices
+        a(href="/users" class="users-link") View Users

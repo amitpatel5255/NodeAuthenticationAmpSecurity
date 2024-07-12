@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+    title Users
+    style.
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f0f0f0;
+        padding: 20px;
+      }
+      h1 {
+        color: #333;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        padding: 10px;
+      }
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+  body
+    h1 Users
+    a(href="/users/new") Add New User
+    ul
+      each user in users
+        li
+          a(href=`/users/${user._id}`) #{user.username} (#{user._id})

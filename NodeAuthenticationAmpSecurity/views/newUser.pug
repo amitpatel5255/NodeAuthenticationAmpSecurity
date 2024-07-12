@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title New User
+  body(style="font-family: Arial, sans-serif; padding: 20px;") // Example inline styles for the body
+    h1(style="color: #333;") Add New User // Example inline styles for the heading
+    form(action="/users" method="post" style="margin-top: 20px;") // Example inline styles for the form
+      label(for="username" style="display: block; margin-bottom: 5px;") Username:
+      input(type="text" id="username" name="username" required style="padding: 5px; width: 100%;") //input field
+      br
+      label(for="password" style="display: block; margin-top: 10px; margin-bottom: 5px;") Password:
+      input(type="password" id="password" name="password" required style="padding: 5px; width: 100%;") //  input field
+      br
+      button(type="submit" style="background-color: #28a745; color: white; padding: 10px; border: none; cursor: pointer;") Add User // Example inline styles for the button

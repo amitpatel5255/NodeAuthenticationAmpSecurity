@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title User
+    link(rel="stylesheet" type="text/css" href="/styles/user.css") // Link to your CSS file
+  body
+    h1 User Details
+    div(class="user-details") // Adding a class for styling
+      p Username: #{user.username}
+      p Password: #{user.password}
+    form(action=`/users/${user._id}?_method=PUT` method="post" class="update-form") // Adding a class for styling
+      input(type="hidden" name="_method" value="PUT")
+      label(for="username") Username:
+      input(type="text" id="username" name="username" value=user.username)
+      br
+      label(for="password") Password:
+      input(type="password" id="password" name="password" value=user.password)
+      br
+      button(type="submit" class="update-button") Update User // Adding a class for styling
+    form(action=`/users/${user._id}?_method=DELETE` method="post" class="delete-form") // Adding a class for styling
+      input(type="hidden" name="_method" value="DELETE")
+      button(type="submit" class="delete-button") Delete User // Adding a class for styling
